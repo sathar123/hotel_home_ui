@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 import 'Home.dart';
+import 'deatils.dart';
 
 void main(){
   runApp(MyApp());
@@ -19,7 +20,13 @@ class MyApp extends StatelessWidget {
         builder: (context, orientation, deviceType) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: Home(),
+            initialRoute: '/',
+            routes: {
+              '/' : (context) => Home(),
+              '/Deatils' : (context) => Deatils(),
+
+            },
+
           );
         }
     );
