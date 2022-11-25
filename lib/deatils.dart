@@ -24,9 +24,12 @@ class Deatils extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            height: 400,
-            child: Image.network(data['image'],fit: BoxFit.cover,),
+          Hero(
+            tag: data['id'],
+            child: Container(
+              height: 400,
+              child: Image.network(data['image'],fit: BoxFit.cover,),
+            ),
           ),
           Positioned(
             top: 0,

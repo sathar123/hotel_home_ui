@@ -160,17 +160,21 @@ class ListRoom extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    Container(
-                      height: 25.h,
-                      width: 90.w,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(10),
-                              topLeft: Radius.circular(10)),
-                          image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: NetworkImage(
-                                 data['image']))
+                    Hero(
+
+                      tag: data['id'],
+                      child: Container(
+                        height: 25.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(10),
+                                topLeft: Radius.circular(10)),
+                            image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: NetworkImage(
+                                   data['image']))
+                        ),
                       ),
                     ),
                     Positioned(
